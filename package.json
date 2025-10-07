@@ -1,0 +1,35 @@
+{
+  "name": "multiplication-app",
+  "version": "1.0.0",
+  "description": "A multiplication app built with Node.js, TypeScript and Clean Architecture",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "ts-node src/app.ts",
+    "dev:nodemon": "nodemon -b 7",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js",
+    "clean": "rimraf ./dist"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "clean-architecture",
+    "multiplication"
+  ],
+  "author": "@JefersonMurilloDev",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/yargs": "^17.0.33",
+    "nodemon": "^3.1.0",
+    "rimraf": "^6.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "yargs": "^18.0.0"
+  }
+}
