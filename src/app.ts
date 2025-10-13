@@ -1,4 +1,4 @@
-import { yarg } from "./config/plugins/args.plugin";
+import  { yarg }  from "./config/plugins/args.plugin";
 import { ServerApp } from "./presentation/server-app";
 
 
@@ -8,9 +8,9 @@ import { ServerApp } from "./presentation/server-app";
 
 async function main() {
 
-    const { b:base, l:limit, s:showTable, d:destination, f:fileName } = await yarg();
+    const { b:base, l:limit, s:showTable, n:fileName, d:destination} = yarg;
 
-    ServerApp.run({ base, limit, showTable, destination, fileName });
+    ServerApp.run({ base, limit, showTable, fileName, destination});
 
 }
 

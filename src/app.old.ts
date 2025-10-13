@@ -6,7 +6,7 @@ import { yarg } from "./config/plugins/args.plugin";
 })();
 
 async function main() {
-  const args = await yarg();
+  const args = yarg;
   const base = args.base as number;
   const limit = args.limit as number;
   const show = args.show as boolean;

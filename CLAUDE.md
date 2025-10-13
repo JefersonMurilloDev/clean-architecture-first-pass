@@ -21,6 +21,13 @@ npm run start           # Construir y ejecutar código compilado
 npm run clean           # Eliminar carpeta dist/
 ```
 
+### Testing
+```bash
+npm test                # Ejecutar todos los tests con Jest
+npm run test:watch      # Ejecutar tests en modo watch (re-ejecuta al detectar cambios)
+npm run test:coverage   # Ejecutar tests y generar reporte de cobertura
+```
+
 ### Ejecutar la Aplicación
 La aplicación acepta argumentos CLI via yargs:
 ```bash
@@ -75,3 +82,10 @@ src/
 - Strict mode habilitado con chequeo de tipos comprehensivo
 - Output: `dist/` con source maps y archivos de declaración
 - ts-node configurado para modo CommonJS transpile-only
+
+## Testing con Jest
+- Framework: Jest con ts-jest para soporte TypeScript
+- Archivos de test: `*.test.ts` o `*.spec.ts` dentro de `src/`
+- Configuración: `jest.config.ts` con preset ts-jest
+- Cobertura: Reportes en formato text, lcov y HTML (carpeta `coverage/`)
+- Patrón de tests: Los archivos de test deben colocarse junto a los archivos que testean o en subcarpetas `__tests__/`
